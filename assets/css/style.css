@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');*/
 
 * {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -67,11 +67,10 @@ body {
 }
 
 .button_theme_cart:hover {
-    background-color: rgb(148, 184, 218);
+    background-color: rgb(61, 120, 178);
 }
 
 .button_theme_cart:active {
-    background-color: rgb(61, 120, 178);
 }
 
 .product-item__label-container {
@@ -84,6 +83,10 @@ body {
     position: absolute;
     top: 10px;
     left: 11px;
+
+}
+
+.label-new {
     display: inline-block;
     width: 31px;
     line-height: 17px;
@@ -94,7 +97,7 @@ body {
     background-color: rgb(75, 166, 239);
 }
 
-.product-item__image-container {
+.product-item__image-icons-container {
     position: relative;
 }
 
@@ -132,17 +135,13 @@ body {
 }
 
 .price_font_medium {
-
+    font-size: 14px;
 }
 
-.description__rating {
-    text-align: center;
-    color: rgb(244, 184, 64);
-}
 
 .description__category {
-    font-size: 12px;
     text-align: center;
+    font-size: 12px;
     text-transform: uppercase;
     color: grey;
     cursor: pointer;
@@ -152,33 +151,31 @@ body {
 }
 
 .description__product-name {
-    font-size: 14px;
     text-align: center;
-    cursor: pointer;
+    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 
 
-
-
-
-
-
-
-
-
-.icons {
+.description__icons {
     right: 10px;
     top: 10px;
     position: absolute;
+}
+
+.icons {
     width: 46px;
     gap: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.icons_visible {
     visibility: visible;
 }
 
@@ -186,8 +183,7 @@ body {
     display: inline-block;
 }
 
-
-.icon_font {
+.icon_size {
     font-size: 23px;
     color: black;
 }
@@ -201,28 +197,27 @@ body {
     display: inline-block;
 }
 
-
-.icon_background {
+.icon_background_grey {
     color: rgb(238, 238, 238);
 }
 
-.icon_color {
+.icon_color_grey {
     color: rgb(79, 77, 80);
 }
 
-.icon__like:active {
+.like-icon-stack:active {
     .fa-heart {
         color: rgb(213, 46, 31);
     }
 }
 
-.icon__eye:active {
+.eye-icon-stack:active {
     .fa-eye {
         color: rgb(48, 102, 174);
     }
 }
 
-.icon__compare:active {
+.compare-icon-stack:active {
     .fa-scale-unbalanced {
         color: rgb(48, 102, 174);
     }
@@ -231,7 +226,8 @@ body {
 
 
 
-.description__score {
+
+.score {
     font-size: 16px;
     overflow: hidden;
     text-align: center;
@@ -252,7 +248,7 @@ body {
     padding-right: 2px;
 }
 
-.description__score .stars-active {
+.score .stars-active {
     color: rgb(244, 184, 64);
     position: relative;
     z-index: 1;
@@ -261,14 +257,13 @@ body {
     white-space: nowrap;
 }
 
-.description__score .stars-inactive {
+.score .stars-inactive {
     color: lightgray;
     position: absolute;
     top: 0;
     left: 2px;
     display: inline-block;
-    -webkit-text-stroke: initial;
-     overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -287,7 +282,7 @@ body {
         margin: 10px;
     }
 
-    .icons {
+    .icons_visible {
         visibility: hidden;
     }
 

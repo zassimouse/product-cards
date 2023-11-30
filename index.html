@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Product Cards</title>
@@ -14,31 +17,31 @@
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
-                <div class="label-container__label-new"> New</div>
+                <div class="label-container__label-new label-new"> New</div>
             </div>
-            <div class="product-item__image-container">
+            <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book1.jpg">
-                <div class="icons">
-                    <a class="fa-stack fa-2x icon_font icon__eye" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-show"></i>
+                <div class="icons description__icons icons_visible">
+                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__like" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show" ></i>
+                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__compare" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color fa-stack-1x fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show " ></i>
+                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
                     </a>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
-                <div class="description__score">
+                <div class="score">
                     <span class="score-wrap">
                         <span class="stars-active" style="width: 70%;">
                             <i class="fa-solid fa-star"></i>
@@ -58,8 +61,10 @@
                 </div>
                 <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
-                    <span class="price_new price_font_medium">$14</span>
-                    <span class="price_old price_font_medium">$24</span>
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
                 </div>
                 </div>
         </div>
@@ -70,33 +75,32 @@
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
-                <div class="label-container__label-new"> New</div>
             </div>
-            <div class="product-item__image-container">
+            <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book2.jpg">
-                <div class="icons">
-                    <a class="fa-stack fa-2x icon_font icon__eye" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-show"></i>
+                <div class="icons description__icons icons_visible">
+                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__like" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show" ></i>
+                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__compare" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color fa-stack-1x fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show " ></i>
+                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
                     </a>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
-                <div class="description__score">
+                <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 50%;">
+                        <span class="stars-active" style="width: 100%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -112,10 +116,12 @@
                         </span>
                     </span>
                 </div>
-                <div class="description__product-name">Flared Shift Dress</div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
-                    <span class="price_new price_font_medium">$14</span>
-                    <span class="price_old price_font_medium">$24</span>
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -126,33 +132,33 @@
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
-                <div class="label-container__label-new"> New</div>
+                <div class="label-container__label-new label-new"> New</div>
             </div>
-            <div class="product-item__image-container">
+            <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book3.jpg">
-                <div class="icons">
-                    <a class="fa-stack fa-2x icon_font icon__eye" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-show"></i>
+                <div class="icons description__icons icons_visible">
+                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__like" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show" ></i>
+                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__compare" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color fa-stack-1x fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show " ></i>
+                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
                     </a>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
-                <div class="description__score">
+                <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 30%;">
+                        <span class="stars-active" style="width: 350%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -168,10 +174,11 @@
                         </span>
                     </span>
                 </div>
-                <div class="description__product-name">Flared Shift Dress</div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
-                    <span class="price_new price_font_medium">$14</span>
-                    <span class="price_old price_font_medium">$24</span>
+                    <span class="price_font_medium">
+                        $68
+                    </span>
                 </div>
             </div>
         </div>
@@ -182,33 +189,33 @@
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
-                <div class="label-container__label-new"> New</div>
+                <div class="label-container__label-new label-new"> New</div>
             </div>
-            <div class="product-item__image-container">
+            <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book4.jpg">
-                <div class="icons">
-                    <a class="fa-stack fa-2x icon_font icon__eye" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-show"></i>
+                <div class="icons description__icons icons_visible">
+                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__like" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show" ></i>
+                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__compare" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color fa-stack-1x fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show " ></i>
+                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
                     </a>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
-                <div class="description__score">
+                <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 50%;">
+                        <span class="stars-active" style="width: 70%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -224,10 +231,12 @@
                         </span>
                     </span>
                 </div>
-                <div class="description__product-name">Flared Shift Dress</div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
-                    <span class="price_new price_font_medium">$14</span>
-                    <span class="price_old price_font_medium">$24</span>
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -238,33 +247,33 @@
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
-                <div class="label-container__label-new"> New</div>
+                <div class="label-container__label-new label-new"> New</div>
             </div>
-            <div class="product-item__image-container">
-                <img class="product-item__image" alt="" src="assets/images/book2.jpg">
-                <div class="icons">
-                    <a class="fa-stack fa-2x icon_font icon__eye" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-show"></i>
+            <div class="product-item__image-icons-container">
+                <img class="product-item__image" alt="" src="assets/images/book1.jpg">
+                <div class="icons description__icons icons_visible">
+                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__like" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show" ></i>
+                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__compare" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color fa-stack-1x fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show " ></i>
+                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
                     </a>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
-                <div class="description__score">
+                <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 50%;">
+                        <span class="stars-active" style="width: 70%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -280,10 +289,12 @@
                         </span>
                     </span>
                 </div>
-                <div class="description__product-name">Flared Shift Dress</div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
-                    <span class="price_new price_font_medium">$14</span>
-                    <span class="price_old price_font_medium">$24</span>
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -294,33 +305,33 @@
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
-                <div class="label-container__label-new"> New</div>
+                <div class="label-container__label-new label-new"> New</div>
             </div>
-            <div class="product-item__image-container">
-                <img class="product-item__image" alt="" src="assets/images/book4.jpg">
-                <div class="icons">
-                    <a class="fa-stack fa-2x icon_font icon__eye" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color fa-inverse icon_font fa-hover-show"></i>
+            <div class="product-item__image-icons-container">
+                <img class="product-item__image" alt="" src="assets/images/book1.jpg">
+                <div class="icons description__icons icons_visible">
+                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__like" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show" ></i>
+                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
                     </a>
-                    <a class="fa-stack fa-2x icon_font icon__compare" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color fa-stack-1x fa-inverse icon_font fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color fa-inverse icon_font fa-hover-show " ></i>
+                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
+                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
+                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
+                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
                     </a>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
-                <div class="description__score">
+                <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 50%;">
+                        <span class="stars-active" style="width: 70%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -336,10 +347,12 @@
                         </span>
                     </span>
                 </div>
-                <div class="description__product-name">Flared Shift Dress</div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
-                    <span class="price_new price_font_medium">$14</span>
-                    <span class="price_old price_font_medium">$24</span>
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
                 </div>
             </div>
         </div>

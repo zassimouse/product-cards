@@ -8,10 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
     <title>Product Cards</title>
 </head>
 <body>
-    <div class="products-container products-container_center">
+    <section class="products-filter products-container_center">
+        <div class="filters-wrap">
+            <button class="button products-filter__button products-filter__button_selected" data-filter="all">All</button>
+            <button class="button products-filter__button" data-filter="favourites">Favourites</button>
+            <button class="button products-filter__button" data-filter="comparison">Comparison</button>
+            <label class="container lb">
+                <input type="checkbox" class="cb" checked>
+                <span class="checkmark"></span>
+                Show hidden
+            </label>
+        </div>
+    </section>
+
+    <section class="products-container products-container_center">
         <div class="product-item products-container__product-item">
             <button class="button button_theme_cart product-item__button" type="button">
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
@@ -21,22 +35,16 @@
             </div>
             <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book1.jpg">
-                <div class="icons description__icons icons_visible">
-                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
-                    </a>
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
                 </div>
             </div>
             <div class="product-item__description">
@@ -69,38 +77,32 @@
                 </div>
         </div>
 
-
         <div class="product-item products-container__product-item">
             <button class="button button_theme_cart product-item__button" type="button">
                 <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
             </button>
             <div class="product-item__label-container">
+                <div class="label-container__label-new label-new"> New</div>
             </div>
             <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book2.jpg">
-                <div class="icons description__icons icons_visible">
-                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
-                    </a>
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
                 <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 100%;">
+                        <span class="stars-active" style="width: 70%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -125,7 +127,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="product-item products-container__product-item">
             <button class="button button_theme_cart product-item__button" type="button">
@@ -136,29 +137,23 @@
             </div>
             <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book3.jpg">
-                <div class="icons description__icons icons_visible">
-                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
-                    </a>
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
                 </div>
             </div>
             <div class="product-item__description">
                 <div class="description__category">T-SHIRTS</div>
                 <div class="score">
                     <span class="score-wrap">
-                        <span class="stars-active" style="width: 350%;">
+                        <span class="stars-active" style="width: 70%;">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -177,12 +172,12 @@
                 <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
                 <div class="description__price">
                     <span class="price_font_medium">
-                        $68
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
                     </span>
                 </div>
             </div>
         </div>
-
 
         <div class="product-item products-container__product-item">
             <button class="button button_theme_cart product-item__button" type="button">
@@ -193,22 +188,16 @@
             </div>
             <div class="product-item__image-icons-container">
                 <img class="product-item__image" alt="" src="assets/images/book4.jpg">
-                <div class="icons description__icons icons_visible">
-                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
-                    </a>
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
                 </div>
             </div>
             <div class="product-item__description">
@@ -240,7 +229,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="product-item products-container__product-item">
             <button class="button button_theme_cart product-item__button" type="button">
@@ -250,23 +238,17 @@
                 <div class="label-container__label-new label-new"> New</div>
             </div>
             <div class="product-item__image-icons-container">
-                <img class="product-item__image" alt="" src="assets/images/book1.jpg">
-                <div class="icons description__icons icons_visible">
-                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
-                    </a>
+                <img class="product-item__image" alt="" src="assets/images/book5.jpg">
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
                 </div>
             </div>
             <div class="product-item__description">
@@ -298,7 +280,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="product-item products-container__product-item">
             <button class="button button_theme_cart product-item__button" type="button">
@@ -308,23 +289,17 @@
                 <div class="label-container__label-new label-new"> New</div>
             </div>
             <div class="product-item__image-icons-container">
-                <img class="product-item__image" alt="" src="assets/images/book1.jpg">
-                <div class="icons description__icons icons_visible">
-                    <a class="fa-stack fa-2x icon_size eye-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-eye fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-show"></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size like-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-regular fa-heart fa-stack-1x icon_color_grey fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-heart fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show" ></i>
-                    </a>
-                    <a class="fa-stack fa-2x icon_size compare-icon-stack" href="#">
-                        <i class="fa-solid fa-circle fa-stack-2x icon_background_grey"></i>
-                        <i class="fa-solid fa-scale-balanced icon_color_grey fa-stack-1x fa-inverse icon_size fa-hover-hidden"></i>
-                        <i class="fa-solid fa-scale-unbalanced fa-stack-1x  icon_color_grey fa-inverse icon_size fa-hover-show " ></i>
-                    </a>
+                <img class="product-item__image" alt="" src="assets/images/book6.jpg">
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
                 </div>
             </div>
             <div class="product-item__description">
@@ -357,6 +332,210 @@
             </div>
         </div>
 
-    </div>
+        <div class="product-item products-container__product-item">
+            <button class="button button_theme_cart product-item__button" type="button">
+                <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
+            </button>
+            <div class="product-item__label-container">
+                <div class="label-container__label-new label-new"> New</div>
+            </div>
+            <div class="product-item__image-icons-container">
+                <img class="product-item__image" alt="" src="assets/images/book7.jpg">
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-item__description">
+                <div class="description__category">T-SHIRTS</div>
+                <div class="score">
+                    <span class="score-wrap">
+                        <span class="stars-active" style="width: 70%;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="stars-inactive">
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
+                <div class="description__price">
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-item products-container__product-item">
+            <button class="button button_theme_cart product-item__button" type="button">
+                <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
+            </button>
+            <div class="product-item__label-container">
+                <div class="label-container__label-new label-new"> New</div>
+            </div>
+            <div class="product-item__image-icons-container">
+                <img class="product-item__image" alt="" src="assets/images/book8.jpg">
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-item__description">
+                <div class="description__category">T-SHIRTS</div>
+                <div class="score">
+                    <span class="score-wrap">
+                        <span class="stars-active" style="width: 70%;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="stars-inactive">
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
+                <div class="description__price">
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-item products-container__product-item">
+            <button class="button button_theme_cart product-item__button" type="button">
+                <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
+            </button>
+            <div class="product-item__label-container">
+                <div class="label-container__label-new label-new"> New</div>
+            </div>
+            <div class="product-item__image-icons-container">
+                <img class="product-item__image" alt="" src="assets/images/book9.jpg">
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-item__description">
+                <div class="description__category">T-SHIRTS</div>
+                <div class="score">
+                    <span class="score-wrap">
+                        <span class="stars-active" style="width: 70%;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="stars-inactive">
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
+                <div class="description__price">
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-item products-container__product-item">
+            <button class="button button_theme_cart product-item__button" type="button">
+                <i class="fa-solid fa-bag-shopping fa-lg"></i>&nbsp;&nbsp;ADD TO CART
+            </button>
+            <div class="product-item__label-container">
+                <div class="label-container__label-new label-new"> New</div>
+            </div>
+            <div class="product-item__image-icons-container">
+                <img class="product-item__image" alt="" src="assets/images/book10.jpg">
+                <div class="icons-container icons_visible">
+                    <div class="circle " data-icon="show">
+                        <i class="fa-solid fa-eye icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="favourites">
+                        <i class="fa-solid fa-heart icon__symbol"></i>
+                    </div>
+                    <div class="circle " data-icon="comparison">
+                        <i class="fa-solid fa-scale-balanced icon__symbol"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-item__description">
+                <div class="description__category">T-SHIRTS</div>
+                <div class="score">
+                    <span class="score-wrap">
+                        <span class="stars-active" style="width: 70%;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="stars-inactive">
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                            <i class="fa-solid fa-star" ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="description__product-name">No one shall be subjected to arbitrary arrest, detention or exile. Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him. </div>
+                <div class="description__price">
+                    <span class="price_font_medium">
+                        <span class="price_new ">$14</span>
+                        <span class="price_old ">$24</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
 </html>

@@ -8,29 +8,19 @@ const btnAll = document.querySelector(".button_all");
 const btnFavourites = document.querySelector(".button_favourites");
 const btnComparison = document.querySelector(".button_comparison");
 
-document.addEventListener('DOMContentLoaded', getTilesState);
-window.addEventListener('beforeunload', saveTilesState);
+document.addEventListener('DOMContentLoaded', getTilesStateFromLS);
+window.addEventListener('beforeunload', saveTilesStateToLS);
 
 btnAll.addEventListener('click', showAll);
 btnFavourites.addEventListener('click', showFavourites);
 btnComparison.addEventListener('click', showCompare);
 
 
-function getTilesState() {
-    let count = 0;
-    if (localStorage.getItem('hiddenProducts')) {
+function getTilesStateFromLS() {
+    if (localStorage.getItem('hiddenProducts') && localStorage.getItem('favouriteProducts') && localStorage.getItem('comparisonProducts')) {
         arrHide = JSON.parse(localStorage.getItem('hiddenProducts'));
-        count++;
-    }
-    if (localStorage.getItem('favouriteProducts')) {
         arrFavourite = JSON.parse(localStorage.getItem('favouriteProducts'));
-        count++;
-    }
-    if (localStorage.getItem('comparisonProducts')) {
         arrCompare = JSON.parse(localStorage.getItem('comparisonProducts'));
-        count++;
-    }
-    if (count > 0) {
         updateTilesState();
     }
 }
@@ -49,7 +39,7 @@ function updateTilesState() {
     });
 }
 
-function saveTilesState() {
+function saveTilesStateToLS() {
     localStorage.setItem('hiddenProducts', JSON.stringify(arrHide));
     localStorage.setItem('favouriteProducts', JSON.stringify(arrFavourite));
     localStorage.setItem('comparisonProducts', JSON.stringify(arrCompare));

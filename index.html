@@ -14,11 +14,11 @@
 <body>
     <section class="products-filter products-container_center">
         <div class="filters-wrap">
-            <button class="button products-filter__button button_all products-filter__button_selected" data-filter="all">All</button>
-            <button class="button products-filter__button button_favourites" data-filter="favourites">Favourites</button>
-            <button class="button products-filter__button button_comparison" data-filter="comparison">Comparison</button>
-            <label class="container lb">
-                <input type="checkbox" class="cb input_show-hidden" checked>
+            <button class="button products-filter__button products-filter__item button_all products-filter__button_selected" data-filter="all">All</button>
+            <button class="button products-filter__button products-filter__item button_favourites" data-filter="favourites">Favourites</button>
+            <button class="button products-filter__button products-filter__item button_comparison" data-filter="comparison">Comparison</button>
+            <label class="container lb products-filter__item">
+                <input type="checkbox" class="cb input_show-hidden" >
                 <span class="checkmark"></span>
                 Show hidden
             </label>
@@ -534,8 +534,6 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 </body>
 </html>

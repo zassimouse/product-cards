@@ -23,6 +23,32 @@ btnAll.addEventListener('click', function() { showItems(btnAll,1); });
 btnFavourites.addEventListener('click', function() { showItems(btnFavourites, 2); });
 btnComparison.addEventListener('click', function() { showItems(btnComparison, 3); });
 
+listOfIconContainers.forEach(function (item, i) {
+    item.addEventListener('click', function(e) {
+        let _target = e.target;
+        let tile = getTileByNumber(i);
+        if (_target.classList.contains('fa-eye')) {
+            arrHide[i] = !arrHide[i];
+            saveTilesStateToLS(1);
+            getTileByNumber(i).classList.toggle('product-item_hide');
+        } else if (_target.classList.contains('fa-heart')) {
+            arrFavourite[i] = !arrFavourite[i];
+            tile.classList.toggle('product-item_favourite');
+            if (!tile.classList.contains('product-item_favourite') && getCurrentFilter() === 2) {
+                tile.classList.add('product-item_hidden');
+            }
+            saveTilesStateToLS(2);
+        } else if (_target.classList.contains('fa-scale-balanced')) {
+            arrCompare[i] = !arrCompare[i];
+            getTileByNumber(i).classList.toggle('product-item_compare');
+            if (!tile.classList.contains('product-item_compare') && getCurrentFilter() === 3) {
+                tile.classList.add('product-item_hidden');
+            }
+            saveTilesStateToLS(3);
+        }
+    });
+});
+
 function getTilesStateFromLS() {
     arrHide = JSON.parse(localStorage.getItem(LS_HIDDEN));
     arrFavourite = JSON.parse(localStorage.getItem(LS_FAVOURITE));
@@ -82,8 +108,6 @@ function getCurrentFilter() {
     }
 }
 
-
-
 function getTileByNumber(n) {
     return document.querySelector(`.product-item:nth-child(${n+1})`);
 }
@@ -117,30 +141,3 @@ function showItems(obj, type) {
         }
     });
 }
-
-
-listOfIconContainers.forEach(function (item, i) {
-    item.addEventListener('click', function(e) {
-        let _target = e.target;
-        let tile = getTileByNumber(i);
-        if (_target.classList.contains('fa-eye')) {
-            arrHide[i] = !arrHide[i];
-            saveTilesStateToLS(1);
-            getTileByNumber(i).classList.toggle('product-item_hide');
-        } else if (_target.classList.contains('fa-heart')) {
-            arrFavourite[i] = !arrFavourite[i];
-            tile.classList.toggle('product-item_favourite');
-            if (!tile.classList.contains('product-item_favourite') && getCurrentFilter() === 2) {
-                tile.classList.add('product-item_hidden');
-            }
-            saveTilesStateToLS(2);
-        } else if (_target.classList.contains('fa-scale-balanced')) {
-            arrCompare[i] = !arrCompare[i];
-            getTileByNumber(i).classList.toggle('product-item_compare');
-            if (!tile.classList.contains('product-item_compare') && getCurrentFilter() === 3) {
-                tile.classList.add('product-item_hidden');
-            }
-            saveTilesStateToLS(3);
-        }
-    });
-});
